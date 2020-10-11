@@ -1,10 +1,10 @@
-x = range(1,11)
+i = 0
 it = 0
 qst = "s"
 total = 0.00
-nlist = list(range(1,12))
-qlist = list(range(1,12))
-ulist = list(range(1,12))
+nlist = list(range(1,10**5))
+qlist = list(range(1,10**5))
+ulist = list(range(1,10**5))
 
 print("*** CAIXA DE SUPERMERCADO ***")
 
@@ -14,33 +14,33 @@ print("* Inserindo produtos *")
 
 print()
 
-for i in x:
+while qst == "S" or qst == "s":
 
-  if qst == "s" or qst == "S":
+  i += 1
 
-    print(f"Digite as informações do produto {i}")
+  print(f"Digite as informações do produto {i}")
 
-    print()
+  print()
 
-    nome = input("Nome do produto: ")
-    qtd = int(input("Quantidade do produto: "))
-    unit= float(input("Valor unitário do produto: "))
+  nome = input("Nome do produto: ")
+  qtd = int(input("Quantidade do produto: "))
+  unit= float(input("Valor unitário do produto: "))
 
-    nlist[i] = nome
-    qlist[i] = qtd
-    ulist[i] = unit
+  nlist[i] = nome
+  qlist[i] = qtd
+  ulist[i] = unit
 
-    total = total + (qtd*unit)
+  total = total + (qtd*unit)
 
-    it = range(1,i+1)
+  it = range(1,i+1)
 
-    print()
+  print()
 
-    qst = input("Deseja continuar? S/N: ")
-    print()
+  qst = input("Deseja continuar? S/N: ")
+  print()
   
 
-print()   
+print()
 print("* Recibo *")
 print()
 
@@ -57,4 +57,5 @@ for item in it:
   print()
   print()
 
-print(f"Valor total de todos os produtos: {total}")
+print(f"Valor total dos produtos: {total}")
+
