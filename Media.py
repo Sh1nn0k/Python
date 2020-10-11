@@ -37,8 +37,6 @@ elif opcao == 2:
     for i in range(1,qtd+1):
       nota = float(input(f"Digite o valor da nota do aluno {i}: "))
       nlist[i-1] = nota
-  
-    for i in range(1,qtd+1):
       mult = mult*nlist[i-1]
     
     mediaGeometrica = round((mult) ** (1/len(nlist)),4)
@@ -54,8 +52,6 @@ elif opcao == 3:
     for i in range(1,qtd+1):
       nota = float(input(f"Digite o valor da nota do aluno {i}: "))
       nlist[i-1] = nota
-
-    for i in range(1,qtd+1):
       soma = soma + (1/nlist[i-1])
 
     mediaHarmonica = round(len(nlist) / soma,4)
